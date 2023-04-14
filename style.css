@@ -1,0 +1,54 @@
+body{
+	display: grid;
+	grid-template: minmax(80px, 80px) 1fr minmax(100px, auto) / 1fr;
+	grid-template-areas: "header"
+								"in-body"
+								"footer";
+}
+a{
+	font-family: arial;
+	font-weight: bold;
+}
+header{
+	grid-area: header;
+}
+header .container{
+	margin: 0 auto;
+	max-width: 1300px;
+	display: grid;
+	grid-template: auto / minmax(100px, auto) minmax(100px, 1fr) minmax(auto, 400px);
+	border-bottom: 1px solid #ccc;
+	align-items: center;
+}
+header .container .logo{
+	grid-column: 1 / 2;
+	background-color: #103;
+}
+header .container .none-block a{
+	margin-left: 20px;
+	color: #103;
+	font-size: 30px;
+	font-weight: bolder;
+}
+header .container .logo img{
+	max-width: 100px;
+	min-height: 50px;
+	padding: 10px;
+}
+header .container .none-block{
+}
+header .container .nav{
+	grid-column: 3 / 4;
+}
+header .container .nav a{
+	color: #103;
+	margin: 10px;
+	padding: 5px;
+	transition: 2s;
+}
+header .container .nav a:active{
+	color: #108;
+}
+header .container .nav a:hover{
+	border-bottom: 1px solid #102;
+}
